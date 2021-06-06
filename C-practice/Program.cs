@@ -10,6 +10,7 @@ namespace C_practice
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello world");
         }
     }
 }
