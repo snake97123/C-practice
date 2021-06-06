@@ -13,7 +13,7 @@ namespace C_practice
         static void Main(string[] args)
         {
             var th = new Thread(ExecuteInForeground);　//Threadクラスの生成
-            th.Start(); //Threadの開始
+            th.Start(100); //Threadの開始
             Thread.Sleep(1000); //1秒待機
             Console.WriteLine("Main thread({0}) exiting...",
                                 Thread.CurrentThread.ManagedThreadId);
