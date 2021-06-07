@@ -13,13 +13,22 @@ namespace C_practice
         static void Main(string[] args)
         {
             var th = new Thread(ExecuteInForeground);　//Threadクラスの生成
-            th.Start(100); //Threadの開始
+            th.Start("a"); //Threadの開始
             Thread.Sleep(1000); //1秒待機
             Console.WriteLine("Main thread({0}) exiting...",
                                 Thread.CurrentThread.ManagedThreadId);
         }
-        private static void ExecuteInForeground()
+        private static void ExecuteInForeground(Object obj)
         {
+            int interval;
+            try
+            {
+                interval = (int)obj;
+            }
+            catch(InvalidCastException)
+            {
+                interval = 5000;
+            }
             var sw = System.Diagnostics.Stopwatch.StartNew();
             Console.WriteLine("Thread{0}: {1}, Priority{2}",
                                Thread.CurrentThread.ManagedThreadId,
