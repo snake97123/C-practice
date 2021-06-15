@@ -1,23 +1,8 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Threading;
-using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Linq;
 
-public class Example
+namespace MyConsoleApp
 {
-   public static void Main()
-    {
-        Console.WriteLine("Application thread ID: {0}",
-                           Thread.CurrentThread.ManagedThreadId);
-        var t = Task.Run(() =>
-        {
-            Console.WriteLine("Task thread ID: {0}",
-              Thread.CurrentThread.ManagedThreadId);
-        });
-       
-        Console.ReadLine();
-    }
-
-    
-    
+   
 }
