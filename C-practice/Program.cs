@@ -8,17 +8,16 @@ namespace Linqpractice
     {
         public static void Main(string[] args)
         {
-            var HumanList = new[]
-            {
-                new { Name = "山下", age = 44, weight = 50},
-                new { Name = "山田", age = 58, weight = 90},
-                new { Name = "吉田", age = 90, weight = 38},
-                new { Name = "花子", age = 28, weight = 35},
-            };
+            var list = new List<int> { 2, 47, 29, 99, 75, 87 };
 
-            foreach (var human in HumanList)
+            Console.WriteLine(list.Count); //要素のカウント
+            Console.WriteLine(list.Remove(47));//要素の削除
+            Console.WriteLine(list.First());//最初の要素の取得
+            Console.WriteLine(list.Last());//最後の要素の取得
+            
+            foreach(int number in list)
             {
-                Console.WriteLine(human);
+                Console.WriteLine(number);
             }
             Console.ReadLine();
         }
