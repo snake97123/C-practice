@@ -4,24 +4,31 @@ using System.Linq;
 
 namespace Linqpractice
 {
-    class Mainclass
+    class Human
     {
+        public string Name { get; set; }
+        public int Age { get; set; }
         public static void Main(string[] args)
         {
-            var list = new List<int> { 2, 47, 29, 99, 75, 87 };
+            Human[] humans = { new Human { Name = "tarou", Age = 33},
+                               new Human { Name = "zirou", Age = 22},
+                               new Human { Name = "sabrou", Age = 44} };
 
-            Console.WriteLine(list.Count); //要素のカウント
-            Console.WriteLine(list.Remove(47));//要素の削除
-            Console.WriteLine(list.First());//最初の要素の取得
-            Console.WriteLine(list.Last());//最後の要素の取得
-            
-            foreach(int number in list)
+            var orderByHuman = humans.OrderBy(x => x.Name);
+            foreach(var human in orderByHuman)
             {
-                Console.WriteLine(number);
+                Console.WriteLine(human.Name);
+            }
+            var reverseHuman = humans.Reverse();
+            foreach (var human in reverseHuman)
+            {
+                Console.WriteLine(human.Name);
             }
             Console.ReadLine();
+
         }
     }
 }
 
     
+　　　
