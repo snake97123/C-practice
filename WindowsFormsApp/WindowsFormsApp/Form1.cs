@@ -21,7 +21,8 @@ namespace WindowsFormsApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            label1.Text = "イベント発生";
+            string s = textBox1.Text;
+            label1.Text = s;
         }
     }
 }
