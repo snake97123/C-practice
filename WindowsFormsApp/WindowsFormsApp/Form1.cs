@@ -24,5 +24,21 @@ namespace WindowsFormsApp
             string s = textBox1.Text;
             label1.Text = s;
         }
+
+        private void CheckedBox1Checked(object sender, EventArgs e)
+        {
+            bool check = checkBox1.Checked;
+            if (check)
+            {
+                label1.Text = "ON";
+                label1.ForeColor = Color.Red;
+                label1.Refresh();
+                
+            }
+            else
+            {
+                label1.Text = "OFF";
+            }
+        }
     }
 }
