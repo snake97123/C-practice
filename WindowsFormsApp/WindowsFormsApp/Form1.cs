@@ -21,23 +21,27 @@ namespace WindowsFormsApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string s = textBox1.Text;
-            label1.Text = s;
+            checkBox1.CheckState = CheckState.Indeterminate;
+           
         }
 
-        private void CheckedBox1Checked(object sender, EventArgs e)
+        private void CheckState1Changed(object sender, EventArgs e)
         {
-            bool check = checkBox1.Checked;
-            if (check)
+            CheckState state = checkBox1.CheckState;
+            switch (state)
             {
-                label1.Text = "ON";
-                label1.ForeColor = Color.Red;
-                label1.Refresh();
-                
-            }
-            else
-            {
-                label1.Text = "OFF";
+                case CheckState.Unchecked:
+                    label1.Text = "OFF";
+                    break;
+                case CheckState.Checked:
+                    label1.Text = "ON";
+                    break;
+                case CheckState.Indeterminate:
+                    label1.Text = "どちらでもないです";
+                    break;
+                default:
+                    label1.Text = "cancel";
+                    break;
             }
         }
     }

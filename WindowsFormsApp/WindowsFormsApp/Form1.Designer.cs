@@ -71,7 +71,7 @@ namespace WindowsFormsApp
             this.checkBox1.TabIndex = 3;
             this.checkBox1.Text = "checkBox1";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.CheckedBox1Checked);
+            this.checkBox1.CheckStateChanged += new System.EventHandler(this.CheckState1Changed);
             // 
             // Form1
             // 
