@@ -52,5 +52,13 @@ namespace WindowsFormsApp
             string n = radio.Text;
             label1.Text = "[" + s + n + "]を選んだ。";
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        
     }
 }
