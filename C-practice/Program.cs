@@ -14,7 +14,6 @@ namespace LinqTest
             {
               { "yamada tarou"}
             };
-
             Console.WriteLine(wares[0,0]);
             Console.ReadLine();
         }
