@@ -12,7 +12,7 @@ namespace LinqTest
             Console.Clear();
             string[,] wares = new string[,]
             {
-              { "yamada tarou"}
+              { "yamashita wataru"}
             };
             Console.WriteLine(wares[0,0]);
             Console.ReadLine();
